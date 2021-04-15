@@ -41,9 +41,9 @@ var parse = function (data) {
             if (!result[rows_idx]) {
                 result[rows_idx] = {};
             }
-
+            console.log(data.table.rows[rows_idx]['c'][row_idx].v)
             value = !!data.table.rows[rows_idx]['c'][row_idx].v ? data.table.rows[rows_idx]['c'][row_idx]
-                .v : null;
+                .v : '';
             if (data.table.rows[rows_idx]['c'][row_idx].f !== undefined && data.table.rows[rows_idx]['c'][
                     row_idx
                 ].v !== undefined) {
@@ -68,7 +68,7 @@ var query = function (sql, sheetName, callback) {
         qs.push(key + '=' + params[key]);
     }
     url += qs.join('&');
-    console.log(url)
+    console.log(url, '|end|')
     return jsonp(url); // Call JSONP helper function
 }
 
@@ -141,10 +141,10 @@ var my_callback = function (data) {
 
 var datas = [];
 
-$('#search-google-btn').click(function(){
-    $('#showData').html('');
+$('#search-8-btn').click(function(){
+    $('#showData8').html('');
     datas = [];
 
-    query('SELECT * WHERE 1', '인원', 'my_callback');
+    query(`SELECT * WHERE A != 'null' ORDER BY A ASC`, '8기', 'my_callback');
 
 });
