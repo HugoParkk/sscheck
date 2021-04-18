@@ -120,7 +120,7 @@ var my_callback = function (data) {
         }
 
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-        var divContainer = document.getElementById("showData");
+        var divContainer = document.getElementById("showData8");
         divContainer.innerHTML = "";
         divContainer.appendChild(table);
     } else {
