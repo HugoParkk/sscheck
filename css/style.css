@@ -27,34 +27,80 @@
 }
 
 * {
+    
     padding: 0;
     margin: 0;
     font-family: NanumBarunGothic;
+    
+}
+
+body {
+    overflow: hidden;
+    background-image: url(../img/SS_logo.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: 15%;
 }
 
 select {
-
-    width: 200px;
-    /* 원하는 너비설정 */
-    padding: .8em .5em;
-    /* 여백으로 높이 설정 */
-    font-family: inherit;
-    /* 폰트 상속 */
-    background: url(https://cdn.discordapp.com/attachments/753217206007103499/833512499953401916/arrow2.png) no-repeat 95% 50%;
-    /* 네이티브 화살표를 커스텀 화살표로 대체 */
+    display: block;
+    width: 16vw;
+    text-align: center;
+    text-align-last: center;
+    height: 6vh;
     border: 1px solid #999;
-    border-radius: 0px;
-    font-size: 2vw;
-    /* iOS 둥근모서리 제거 */
+    border-radius: .5vh;
+    font-size: 1.8vh;
     -webkit-appearance: none;
-    /* 네이티브 외형 감추기 */
     -moz-appearance: none;
     appearance: none;
 }
+
 button {
-    width: 22vw;
-    height: 6vh;
-    border-radius: 1vh;
-    border: 0 solid;
-    
+    width: 16vw;
+    background-color: #fff;
+    height: 6.4vh;
+    border-radius: .5vh;
+    font-size: 1.6vh;
+    color: #777;
+    font-weight: bold;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+h3 {
+    /* width: 3vw;
+    height: 1.8vh; */
+    font-size: 1.8vh;
+    color: #888;
+    margin: 2vh;
+}
+
+.container {
+    background: linear-gradient(to right, transparent, #00e1ff);
+    overflow: hidden;
+    height: 200vh;
+    width: 200vw;
+    margin-left: 45%;
+}
+
+.showData {
+    position: absolute;
+    top: 50%;
+    transform: translate(125%, -65%);
+}
+
+.animation-fade2 {
+    opacity: 0;
+    position: absolute;
+    transform: translate(125%, -700%);
+}
+
+.animation-init {
+    margin-top: 70vh;
+}
+
+.animation-fade {
+    margin-top: 0%;
+    transition: all 1s;
 }
